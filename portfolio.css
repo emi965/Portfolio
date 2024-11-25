@@ -1,4 +1,3 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,29 +11,28 @@ body {
   background-color: #f9f9f9;
 }
 
+/* Header Branding and Navigation */
 .branding {
-  text-align: left; /* Align the text to the left */
-  padding-left: 2rem; /* Same padding as the navigation links */
+  text-align: left;
+  padding-left: 2rem; /* Align branding with navigation links */
 }
 
 .links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Space between links */
+  gap: 20px;
   justify-content: flex-start; /* Align links to the left */
-  align-items: center; /* Vertically align links */
-  padding-left: 2rem; /* Same left padding as the branding */
+  align-items: center;
+  padding-left: 2rem;
 }
 
 .branding h1,
 .branding p {
-  margin: 0; /* Remove default margins for clean alignment */
+  margin: 0;
 }
 
-
-
 .links a {
-  text-decoration: none; /* Removes underline */
+  text-decoration: none;
   color: #333;
   font-weight: 500;
 }
@@ -42,7 +40,7 @@ body {
 /* Intro Section */
 .intro {
   text-align: center;
-  padding: 5rem 1rem; /* Add padding for smaller screens */
+  padding: 5rem 1rem;
   background: linear-gradient(135deg, #007BFF, #6610f2);
   color: #fff;
 }
@@ -58,12 +56,12 @@ body {
 
 /* About Section */
 .about {
-  display: flex; /* Flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  padding: 3rem 1rem; /* Add padding for smaller screens */
+  display: flex;
+  flex-wrap: wrap; /* Stack content on smaller screens */
+  padding: 3rem 1rem;
   align-items: center;
   justify-content: center;
-  gap: 2rem; /* Space between image and text */
+  gap: 2rem;
   text-align: center;
 }
 
@@ -74,9 +72,10 @@ body {
 
 .img {
   border-radius: 50%; /* Circular image */
-  width: 100%;
-  max-width: 300px; /* Limit the size for smaller screens */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Make it responsive */
+  max-width: 300px; /* Limit size for larger screens */
+  height: auto;
+  margin: 0 auto;
 }
 
 /* Projects Section */
@@ -131,7 +130,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
 }
 
 .footer .social-links a {
@@ -141,20 +140,20 @@ body {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  /* Stack navigation links */
+  /* Stack navigation links vertically */
   .links {
     flex-direction: column;
-    gap: 20px; /* Reduce spacing */
+    gap: 20px;
     align-items: center;
   }
 
   /* Stack About section */
   .about {
-    flex-direction: column; /* Stack image and text */
+    flex-direction: column; /* Stack image and text vertically */
   }
 
   .about .img {
-    max-width: 200px; /* Smaller image for phones */
+    max-width: 200px; /* Smaller image size for phones */
   }
 
   /* Adjust Intro Section Padding */

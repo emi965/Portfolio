@@ -1,145 +1,170 @@
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.branding {
+  text-align: left; /* Align the text to the left */
+  padding-left: 2rem; /* Same padding as the navigation links */
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between links */
+  justify-content: flex-start; /* Align links to the left */
+  align-items: center; /* Vertically align links */
+  padding-left: 2rem; /* Same left padding as the branding */
+}
+
+.branding h1,
+.branding p {
+  margin: 0; /* Remove default margins for clean alignment */
+}
+
+
+
+.links a {
+  text-decoration: none; /* Removes underline */
+  color: #333;
+  font-weight: 500;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 5rem 1rem; /* Add padding for smaller screens */
+  background: linear-gradient(135deg, #007BFF, #6610f2);
+  color: #fff;
+}
+
+.intro .btn {
+  margin-top: 1.5rem;
+  background: #FFD700;
+  color: #333;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About Section */
+.about {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 3rem 1rem; /* Add padding for smaller screens */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Space between image and text */
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.img {
+  border-radius: 50%; /* Circular image */
+  width: 100%;
+  max-width: 300px; /* Limit the size for smaller screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Projects Section */
+.projects {
+  padding: 3rem 1rem;
+  background: #fff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+}
+
+.project-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.contact .btn {
+  background: #007BFF;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer .social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Stack navigation links */
   .links {
-    list-style: none;
-    display: flex;
-    gap: 50px;
+    flex-direction: column;
+    gap: 20px; /* Reduce spacing */
+    align-items: center;
   }
-  
-  .links a {
-    text-decoration: none;/*removes the link's underline decor*/
-    color: #333;
-    font-weight: 500;
-  }
-  
-  /* intro Section */
-  .intro {
-    text-align: center;
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #007BFF, #6610f2);
-    color: #fff;
-  }
-  
-  .intro .highlight {
-    color: #FFD700;
-  }
-  
-  .intro .btn {
-    margin-top: 1.5rem;
-    background: #FFD700;
-    color: #333;
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  /* About Section*/
+
+  /* Stack About section */
   .about {
-      display: flex; /* Flexbox for layout */
-      padding: 3rem;
-      text-align: center;
-  }
-  
-  .about p {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
+    flex-direction: column; /* Stack image and text */
   }
 
-  .img{
-    border-radius: 50%;/*border-radius: 50% makes circle image*/
-    width: 600px;
+  .about .img {
+    max-width: 200px; /* Smaller image for phones */
   }
 
+  /* Adjust Intro Section Padding */
+  .intro {
+    padding: 3rem 1rem;
+  }
 
-
-  /* Projects Section */
-  .projects {
-    padding: 3rem 0;
-    background: #fff;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .project-item {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-item img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .project-info {
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .project-info h3 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-info a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: 600;
-  }
-  
-  /* Contact Section */
-  .contact {
-    text-align: center;
-    padding: 3rem 0;
-  }
-  
-  .contact .btn {
-    background: #007BFF;
-    color: #fff;
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  /* Footer */
-  .footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
+  /* Footer Social Links */
   .footer .social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .footer .social-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
+}

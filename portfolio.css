@@ -4,26 +4,47 @@
   box-sizing: border-box;
 }
 
-body {
+body {/*light mode*/
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
 }
 
-/* Header Branding and Navigation */
-.branding {
-  text-align: left;
-  padding-left: 2rem; /* Align branding with navigation links */
+body.dark {/*dark mode*/
+  background-color: #0d0d0d;
+  color: #ffffff;
 }
 
+
+.girl {
+  width: 150px;
+  height: 150px;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+}
+
+.info{
+    align-items: center;
+    padding-left: 20px;
+
+}
+
+#themeIcon {
+  padding-left: 500px;
+}
+
+
 .links {
-  list-style: none;
+  margin-top: 20px;/*leaves 20px space above the links*/
   display: flex;
   gap: 20px;
-  justify-content: flex-start; /* Align links to the left */
   align-items: center;
-  padding-left: 2rem;
 }
 
 .branding h1,
@@ -31,24 +52,25 @@ body {
   margin: 0;
 }
 
-.links a {
+body.dark .links a {/*when in dark mode text color for links should be white*/
+  color: #ffffff;
+}
+
+.links a {/*when in light mode text color for links should be black*/
   text-decoration: none;
-  color: #333;
+  color: #000000;
   font-weight: 500;
 }
 
-/* Intro Section */
 .intro {
   text-align: center;
   padding: 5rem 1rem;
-  background: linear-gradient(135deg, #007BFF, #6610f2);
-  color: #fff;
 }
 
 .intro .btn {
   margin-top: 1.5rem;
-  background: #FFD700;
-  color: #333;
+  background: #EB4A4A;
+  color: #fff;
   padding: 0.7rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
@@ -78,11 +100,6 @@ body {
   margin: 0 auto;
 }
 
-/* Projects Section */
-.projects {
-  padding: 3rem 1rem;
-  background: #fff;
-}
 
 .project-grid {
   display: grid;
@@ -103,14 +120,35 @@ body {
   height: auto;
 }
 
+/*contact form*/
+form input{
+  width: 450px;
+  height: 50px;
+}
+
+form textarea {
+    width: 450px;
+    height: 200px;
+}
+
+form button{
+  background: #EB4A4A;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+
+}
+
 /* Contact Section */
 .contact {
   text-align: center;
   padding: 3rem 1rem;
+  border-radius: 5px;
 }
 
 .contact .btn {
-  background: #007BFF;
+  background: #EB4A4A;
   color: #fff;
   padding: 0.7rem 1.5rem;
   text-decoration: none;
@@ -119,7 +157,7 @@ body {
 
 /* Footer */
 .footer {
-  background: #333;
+  background-color: #0d0d0d;
   color: #fff;
   text-align: center;
   padding: 1rem 0;

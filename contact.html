@@ -6,6 +6,17 @@
   <title>Emi's Portfolio</title>
   <link rel="stylesheet" href="portfolio.css">
   <link rel="icon" type="image/png" href="favicon.png">
+  <!--Emailjs installation script from docs page-->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "56HvsQe-WrtdKTMOF",//YOUR_PUBLIC_KEY
+        });
+    })();
+  </script>
 
 </head>
 <body class="dark">
@@ -20,7 +31,7 @@
                 <a href="index.html">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
-                <a href="Emioluwa_Oguntunde(Resume).pdf" target="_blank">View My Resume</a>
+                <a href="Resume.pdf" target="_blank">View My Resume</a>
             </div>
         </div>
         <img id="themeIcon" src="dark.png" alt="toggle theme">
@@ -30,13 +41,13 @@
         <h1>Contact</h1>
         <br>
         <form>
-            <input type="text" name="name" placeholder="Your Name" required><br><br>
+            <input type="text"id="name" name="name" placeholder="Your Name" required><br><br>
 
-            <input type="email" name="email" placeholder="Your Email" required><br><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
 
-            <textarea name="message" placeholder="Message" required></textarea><br><br>
+            <textarea name="message" id="message"placeholder="Message" required></textarea><br><br>
 
-            <button type="submit">Send Message</button>
+            <button onclick="sendMail()">Send Message</button>
         </form>
   </section>
 

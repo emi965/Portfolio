@@ -27,13 +27,17 @@
     </div>
 
     <br>
-    <h2 style="text-align: center;">Projects</h2>
+    <div>
+      <h2 style="text-align: center;">Projects</h2>
+    </div>
     <div class="projects">
-      <img src="project1.png" alt="Project1" class="image">
-      <div class="overlay">
-        <div class="text"> I developed a fully client-side JavaScript web application that allows users to browse multiple vendors, dynamically display categorized office supplies, and build an order in real time. I implemented vendor switching, stock validation, order calculations (subtotal, tax, delivery, minimum order logic), and a responsive three-column layout using plain JavaScript without external libraries.</div>
-        <h3>Front End Shopping Website</h3>
-      </div>
+      <div class="project-filters">
+        <button onclick="filterProjects('All')">All</button>
+        <button onclick="filterProjects('Web Dev')">Web Development</button>
+        <button onclick="filterProjects('Web Design')">Web Design</button>
+        <button onclick="filterProjects('Graphic')">Graphic Design</button>
+    </div>
+      <div class="projects-grid" id="projectsGrid"></div>
     </div>
 
   <section id="contact" class="contact">
